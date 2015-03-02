@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+    	<head>
+    		<meta charset="UTF-8">
+    		<title>MobileCharts</title>
+    		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    		<!--
+    			<link rel="shortcut icon" href="images/favicon.png">
+    			<link rel="apple-touch-icon" href="images/apple-touch-icon.png"> 
+    		-->
+    		<link href="jqueryMobile/jquery.mobile.external-png-1.4.5.css" rel="stylesheet">
+    		<link href="jqueryMobile/jquery.mobile.external-png-1.4.5.min.css" rel="stylesheet">
+    		<link href="jqueryMobile/jquery.mobile.structure-1.4.5.css" rel="stylesheet">
+    		<link href="jqueryMobile/jquery.mobile-1.4.5.css" rel="stylesheet">
+    		<link href="jqueryMobile/jquery.mobile.inline-png-1.4.5.min.css" rel="stylesheet">
+    		<link href="jqueryMobile/jquery.mobile.structure-1.4.5.min.css" rel="stylesheet">
+    		<link href="jqueryMobile/jquery.mobile.inline-svg-1.4.5.css" rel="stylesheet">
+    		<link href="jqueryMobile/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet">
+    		<link href="jqueryMobile/jquery.mobile.inline-svg-1.4.5.min.css" rel="stylesheet">
+    		<link href="jqueryMobile/jquery.mobile.inline-png-1.4.5.css" rel="stylesheet">
+    		<link href="jqueryMobile/jquery.mobile.theme-1.4.5.css" rel="stylesheet">
+    		<link href="jqueryMobile/jquery.mobile-1.4.5.min.css" rel="stylesheet">
+    		<link rel="stylesheet" href="css/main.css">
+    		<link rel="stylesheet" href="jqueryMobile/jquery.mobile.icons-1.4.5.css">
+    		<link rel="stylesheet" href="jqueryMobile/jquery.mobile.icons-1.4.5.min.css">
+    		
+    		<script>window.$ = window.jQuery = WLJQ;</script>
+    		<script src="jqueryMobile/jquery.mobile-1.4.5.js"></script>
+			<script type="text/javascript" src="jqplot/js/jquery.jqplot.js"></script>
+			<script type="text/javascript" src="jqplot/importPlugins.js"></script>
+			<link rel="stylesheet" type="text/css" href="jqplot/css/jquery.jqplot.css" />
+    		
+    	</head>
+    	<body style="display: none;">
+    		<div data-role="page" id="homePage">
+    			<div data-role="content" style="padding: 15px">
+    				Selecione um Tipo de Gráfico
+    			</div>
+    			<a href="#" data-role="button" id="lineButton" >Show LINE</a>
+    			<a href="#" data-role="button" id="barButton" >Show BAR</a>
+    		</div>
+			<div data-role="page" id="chartPage">
+    			<div id="chartdiv"></div>
+			</div>
+    		
+    		<script src="js/initOptions.js"></script>
+    		<script src="js/main.js"></script>
+    		<script src="js/messages.js"></script>
+  			
+    	</body>
+</html>

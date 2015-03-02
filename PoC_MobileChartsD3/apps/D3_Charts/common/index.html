@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>D3_Charts</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+	
+		<link rel="stylesheet" href="css/main.css">
+		
+		<link href="lib/c3/css/c3.css" rel="stylesheet" type="text/css">
+
+		<script src="lib/c3/js/d3.v3.min.js" charset="utf-8"></script>
+		<script src="lib/c3/js/c3.js"></script>
+		
+		<script>
+			window.$ = window.jQuery = WLJQ;
+		</script>
+	</head>
+	<body style="display: none;">
+		
+		<div id="homePage" data-scope="page" >
+		
+		</div>
+		
+		<div id="chartPage" data-scope="page" >
+			<div id="chart"></div>
+		</div>
+		
+		
+		<script src="js/initOptions.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/messages.js"></script>
+		<script type="text/javascript">
+			var chart = c3.generate({
+			    data: {
+			        // iris data from R
+			        columns: [
+			            ['L1', 30],
+			            ['L2', 120],
+			            ['L3', 88],
+			            ['L4', 90],
+			        ],
+			        type : 'pie',
+			        onclick: function (d, i) { console.log("onclick", d, i); },
+			        onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+			        onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+			    }
+			});
+
+		</script>
+		
+	</body>
+</html>

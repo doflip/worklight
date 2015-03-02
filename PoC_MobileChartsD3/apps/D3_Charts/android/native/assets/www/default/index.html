@@ -1,0 +1,65 @@
+<!DOCTYPE HTML><html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
+        <title>D3_Charts</title>
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">
+        <link href="worklight/worklight.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+        <link href="lib/c3/css/c3.css" rel="stylesheet" type="text/css">
+        <script>
+		// Define WL namespace.
+		var WL = WL ? WL : {};
+		/**
+		 * WLClient configuration variables.
+		 * Values are injected by the deployer that packs the gadget.
+		 */
+		WL.StaticAppProps = {
+   "APP_DISPLAY_NAME": "D3_Charts",
+   "APP_ID": "D3_Charts",
+   "APP_SERVICES_URL": "\/apps\/services\/",
+   "APP_VERSION": "1.0",
+   "ENVIRONMENT": "android",
+   "LOGIN_DISPLAY_TYPE": "embedded",
+   "WORKLIGHT_NATIVE_VERSION": "1122267471",
+   "WORKLIGHT_PLATFORM_VERSION": "6.2.0.00.20140613-0730",
+   "WORKLIGHT_ROOT_URL": "\/apps\/services\/api\/D3_Charts\/android\/"
+};</script>
+		<script src="worklight/cordova.js"></script>
+		<script src="worklight/wljq.js"></script>
+		<script src="worklight/worklight.js"></script>
+		<script src="worklight/checksum.js"></script>
+		<script charset="utf-8" src="lib/c3/js/d3.v3.min.js"></script>
+		<script src="lib/c3/js/c3.js"></script>
+		<script>
+			window.$ = window.jQuery = WLJQ;
+		</script>
+    </head>
+    <body style="display: none;">
+        <div data-scope="page" id="homePage">
+        </div>
+        <div data-scope="page" id="chartPage">
+            <div id="chart"></div>
+        </div>
+        <script src="js/initOptions.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/messages.js"></script>
+		<script type="text/javascript">
+			var chart = c3.generate({
+			    data: {
+			        // iris data from R
+			        columns: [
+			            ['L1', 30],
+			            ['L2', 120],
+			            ['L3', 88],
+			            ['L4', 90],
+			        ],
+			        type : 'pie',
+			        onclick: function (d, i) { console.log("onclick", d, i); },
+			        onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+			        onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+			    }
+			});
+		</script>
+    </body>
+</html>
